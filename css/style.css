@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
 background-color: white
 font-size: 18px;
@@ -9,13 +13,14 @@ padding: 0;
 
 h1{
   font-family: "Raleway";
-  color: #FA7268;
+  color: #008571;
   font-size: 50px;
   font-weight: normal;
   line-height: 1.15;
   padding: 50px 0;
   text-align: left;
 }
+
 
 #name{
   font-family: "Raleway";
@@ -26,28 +31,39 @@ h1{
   padding: 20px 0;
   text-align: left;
 }
+#human_ex{
+  font-family: "Raleway";
+  color: black;
+  font-size: 50px;
+  font-weight: normal;
+  line-height: 1.15;
+  padding: 20px 0;
+  text-align: left;
+}
 
 #rhea{
-  color: #FA7268;
+  color: #008571;
 
 }
 
 #rhea:after {
   content:"Elevate";
-  animation: rhea 4s linear infinite;
+  animation: rhea 5s linear infinite;
+  transition-timing-function: ease-in;
+  transition: 0.3s;
 }
 
 @keyframes rhea {
   0% { content:"Elevate"; }
-  /* 10% { content:"Designer"; } */
-  45% { content:"Empower"; }
-  /* 30% { content:"Creator"; } */
-  /* 60% { content:"Coder"; } */
-  90% { content: "Enhance"; }
-  /* 60% { content: "elit"; }
-  70% { content: "Hic"; }
-  80% { content: "atque"; } */
-  /* 90% { content: "Rhea"; } */
+  10% { opacity: 0; }
+  20% { opacity: 0;}
+  30% { content: "Enhance";  opacity: 1; }
+  40% { opacity: 0;}
+  50% {  opacity: 0; }
+  60% {content: "Empower";  opacity: 1; }
+  70% { opacity: 0;  }
+  80% { opacity: 0;}
+  90% { opacity: 0; }
 }
 
 h2{
@@ -79,18 +95,18 @@ p{
 
 nav ul{
   list-style-type: none;
-  padding-left: 30px;
+  padding-left: 80px;
 }
 
 nav li{
   display: inline;
-  padding-right: 20px;
+  padding-right: 100px;
   padding-bottom: 20px;
 }
 
 nav a{
   color: white;
-  font-weight: lighter;
+  /* font-weight: lighter; */
   font-weight: bold;
   text-decoration: none;
 }
@@ -123,25 +139,30 @@ a:focus{
 
   border: 2px solid white;
 }
+
+
 /* a:active{
   border:  2px solid white;
 } */
 footer{
-  background-color: #FA7268;
+  background-color: #008571;
   color: white;
   grid-column: 1 / -1;
-  grid-row: 7 / span 1;
+  grid-row: 10 /auto;
   padding-top: 30px;
   text-align: center;
+  padding-left: 50px;
+
 }
 
 .container{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
   grid-row-gap: 15px;
   width: 100vw;
 }
+
 
 .intro{
   grid-column: 1/-1;
@@ -163,14 +184,33 @@ footer{
   background-color: white;
   color: black;
   grid-column: 1/-1;
+  grid-row: 7/8;
   padding-left: 30px;
   padding-right: 30px;
+
 }
+
+.face{
+  grid-column: 1/-1;
+  grid-row: 8/9;
+  padding-left:250px;
+  margin-top: -400px;
+  margin-bottom: 100px;
+
+}
+
+#headshot{
+  padding-top: 400px;
+  margin-left: -100px;
+  width: 200px;
+  height:200px;
+}
+
 .contact_form{
   background-color: white;
   color: black;
   grid-column: 1/-1;
-  grid-row: 8/auto;
+  grid-row: 9/auto;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -180,7 +220,7 @@ footer{
   color: white;
   grid-column: 1 / -1;
   grid-row: 1 / span 1;
-  background-color: #FA7268;
+  background-color: #008571;
   padding-left: 20px 0;
   text-align: left;
 
@@ -215,7 +255,7 @@ footer{
 }
 .project_titles{
 
-  color: #FA7268;
+  color: #008571;
   text-align: center;
   /* grid-column: 1/-1; */
   padding-left: 10px;
@@ -242,16 +282,23 @@ footer{
 }
 .project_link{
   text-align: center;
-  color: #FA7268;
+  color: #008571;
   text-decoration: none;
   padding-left: 190px;
-  font-family: "Arial"
+  font-family: "Raleway";
+  font-size: 16px;
+
 
 }
 
-.project_link : hover{
-   -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+.project_link:hover{
+  /* -webkit-transform: scale(1.5); */
+  /* transform: scale(5.5); */
+  -webkit-transition: font-size 0.5s;
+  transition: font-size 0.5s;
+  font-size: 20px;
+  font-family: "Raleway"
+
 }
 
 .photos{
@@ -284,13 +331,7 @@ iframe{
   margin: 0 auto;
 }
 
-#headshot{
-  grid-column: 1/-1;
-  width:300px;
-  height:300px;
-  padding-left: 50px;
-  padding-right: 30px;
-}
+
 
 #redgate_outcome{
   grid-column: 1/-1;
@@ -322,7 +363,83 @@ iframe{
   width: 90vw;
 }
 
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
 
+
+input[type=submit] {
+  background-color: #008571;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #022B25;
+  /* -webkit-transform: scale(1.5);
+  transform: scale(1.5); */
+
+}
+
+.contact_form {
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  padding: 20px;
+
+  padding-right: 20px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  margin-top: 30px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #008571;
+  color: white;
+  transform: rotateY(180deg);
+  padding-bottom:
+}
 
 @media screen and (min-width: 600px){
   .row{
@@ -331,6 +448,42 @@ iframe{
 
   .row img{
     width:45vw;
+  }
+
+  .intro{
+    /* padding-right: 100px; */
+    padding-right: 80px;
+    padding-bottom: 300px;
+    padding-top: 100px;
+  }
+
+  .container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    /* grid-row-gap: 15px;
+    width: 100vw; */
+  }
+
+  .ddd_project{
+    grid-column: 1/2;
+    grid-row: 4/5;
+
+  }
+  .decoded_project{
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .redgate_project{
+    grid-column:1/2;
+    grid-row:5/6;
+  }
+
+  .case_study{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
   }
 
 
@@ -356,7 +509,7 @@ iframe{
   .container{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
     /* grid-row-gap: 15px;
     width: 100vw; */
 
@@ -377,21 +530,130 @@ iframe{
 
   }
   .decoded_project{
-    grid-column: 3/4;
-    grid-row: 5/6;
+    grid-column: 2/3;
+    grid-row: 4/5;
   }
   .redgate_project{
-    grid-column:1/2;
-    grid-row:6/7;
+    grid-column:3/4;
+    grid-row:4/5;
   }
 
-
-  .about_text{
-    grid-column: 1/-1;
-    grid-row: 5/auto;
-    /* margin-right: 860px;
-    padding-right: 200px; */
+  .about_section{
+    grid-column: 1/3;
+    grid-row: 5/6;
+    margin-top: 150px;
+    padding-right: 200px;
   }
+
+    .face{
+      grid-row: 5/6;
+      grid-column: 3/4;
+      margin-top: 100px;
+      margin-right: 300px;
+      margin-left: -300px;
+    }
+    #headshot{
+      grid-row: 5/6;
+      grid-column: 3/4;
+      width:300px;
+      height:300px;
+
+    }
+
+    .ddd_outcome{
+      grid-column: 1/-1;
+      width:960px;
+      height:740px;
+      padding-left: 90px;
+
+    }
+    #redgate_outcome{
+      grid-column: 1/-1;
+      width:1000px;
+      height:700px;
+      padding-left: 90px;
+    }
+
+    iframe{
+      grid-column: 1 / -1;
+      height:700px;
+      width:1000px;
+      border: none;
+      padding-left: 90px;
+    }
+
+    .photos{
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    /* Style inputs with type="text", select elements and textareas */
+    input[type=text], select, textarea {
+      width: 100%; /* Full width */
+      padding: 12px; /* Some padding */
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+
+
+    input[type=submit] {
+      background-color: #008571;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #022B25;
+    }
+
+    .contact_form {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      grid-row: 7/auto;
+      grid-column: 1/-1;
+      padding-right: 500px;
+    }
+    footer{
+      background-color: #008571;
+      color: white;
+      grid-column: 1 / -1;
+      grid-row: 8 /auto;
+      padding-top: 30px;
+      text-align: center;
+      padding-left: 500px;
+
+    }
+
+  }
+
+  @media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none; /* Your code here - set to default setting */
+    transition: none; /* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
 
   /* .face{
     grid-row: 5/6;
@@ -400,38 +662,8 @@ iframe{
   } */
 
 
-  #headshot{
-    grid-row: 5/6;
-    grid-column: 3/auto;
-    float: left;
-  }
 
-  .ddd_outcome{
-    grid-column: 1/-1;
-    width:960px;
-    height:740px;
-    padding-left: 90px;
 
-  }
-  #redgate_outcome{
-    grid-column: 1/-1;
-    width:1000px;
-    height:700px;
-    padding-left: 90px;
-  }
-
-  iframe{
-    grid-column: 1 / -1;
-    height:700px;
-    width:1000px;
-    border: none;
-    padding-left: 90px;
-  }
-
-  .photos{
-    padding-top: 100px;
-    padding-bottom: 50px;
-  }
 
 
 }

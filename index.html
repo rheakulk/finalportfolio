@@ -10,7 +10,8 @@
   </head>
   <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="container">
+  <div class="container">
+
     <div class="nav" id = "navbar">
       <nav>
         <ul>
@@ -20,13 +21,15 @@
           <li><a href="life.html">Life</a></li>
         </ul>
       </nav>
+
     </div>
+
 
     <div id="main" class = "intro">
 
     <!-- <h1 id = "change"></h1> -->
     <h1 id = "name"> <span id = "rhea"> </span> </h1>
-    <h1 id = "name"> The human experience </h1>
+    <h1 id="human_ex"> The human experience </h1>
     <h2>I'm a UX/UI Designer looking to create beautiful digital
       products that elevate, empower, and enhance the human experience.</h2>
 
@@ -34,8 +37,6 @@
     as a designer and a person.</h2>
 
     </div>
-
-
 
 
     <div class = "project_section">
@@ -47,29 +48,33 @@
   <div class = "project_intro ddd_project">
       <img src="images/ddd_laptop.png" alt="data driven detroit" class = "laptop ddd" >
       <div class = "title_desc" id = "title_desc1">
-      <h2 class = "project_titles" id = "ddd_title"> Data Driven Detroit </h2>
-      <p class = "project_description"> Designed a user friendly training module for an online data analysis tool </p>
-      <a href="ddd.html" class = "project_link"> Learn More</a>
+        <h2 class = "project_titles" id = "ddd_title"> Data Driven Detroit </h2>
+        <p class = "project_description"> Designed a user friendly training module for an online data analysis tool </p>
+        <a href="ddd.html" class = "project_link"> Learn More</a>
     </div>
   </div>
+
+
 
   <div class = "project_intro decoded_project">
       <img src="images/decoded_laptop.png" alt="decoded" class = "laptop decoded">
       <div class = "title_desc" id = "title_desc2" >
-      <h2 class = "project_titles" id = "decoded_title"> Decoded </h2>
-      <p class = "project_description">As a UX Design intern, I worked to redesign the company resources page</p>
-      <a href="decoded.html" class = "project_link"> Learn More </a>
+        <h2 class = "project_titles" id = "decoded_title"> Decoded </h2>
+        <p class = "project_description">As a UX Design intern, I worked to redesign the company resources page</p>
+        <a href="decoded.html" class = "project_link"> Learn More </a>
     </div>
   </div>
+
 
   <div class = "project_intro redgate_project">
       <img src="images/redgate_laptop.png" alt="redgate" class = "laptop redgate">
       <div class = "title_desc" id = "title_desc3" >
-      <h2 class = "project_titles" id = "redgate_title"> Redgate </h2>
-      <p class = "project_description">I worked as a UX intern on the design of the early stage SQL Search tool</p>
-      <a href="redgate.html" class = "project_link"> Learn More </a>
+        <h2 class = "project_titles" id = "redgate_title"> Redgate </h2>
+        <p class = "project_description">I worked as a UX intern on the design of the early stage SQL Search tool</p>
+        <a href="redgate.html" class = "project_link"> Learn More </a>
     </div>
   </div>
+
 
 
 
@@ -93,26 +98,51 @@
       Game of Thrones for the hundredth time.
       </p>
     </div>
+    <!-- <div class = "face">
+      <img src = "images/headshot.png" alt = "rhea's face" id = "headshot">
+    </div> -->
+    </div>
     <div class = "face">
       <img src = "images/headshot.png" alt = "rhea's face" id = "headshot">
     </div>
-    </div>
 
 
-
-    <div class = "contact_form">
+    <div class="contact_form">
     <h1> Get in touch!</h1>
     <h2> Want to chat about my work or anything else, shoot me a message I promise I'll respond </h2>
-    <p> First Name</p>
-    <p> Last Name</p>
-    <p> Email Address</p>
-    <p> Message</p>
-      <!-- <img src = "images/headshot.png" alt = "rhea's face" id = "headshot"> -->
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
+
+
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" ></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/headshot.png" alt="Avatar" style="width:200px;height:200px;">
+      </div>
+      <div class="flip-card-back">
+
+        <p>Design like you're right</p>
+        <p>...Test like you're wrong</p>
+      </div>
     </div>
-    <!-- <footer>
-      <p>University of Michigan School of Information <br/>
-      Rhea Kulkarni BSI 2020</p>
-    </footer> -->
+  </div>
+</div>
+    <footer>
+      <p>University of Michigan School of Information<p>
+      <p>Rhea Kulkarni BSI 2020</p>
+    </footer>
     </div>
   </body>
 
