@@ -11,6 +11,9 @@ padding: 0;
 }
 
 
+img{
+  width: 98%;
+}
 h1{
   font-family: "Raleway";
   color: #008571;
@@ -88,20 +91,26 @@ p{
   font-family: "Georgia"
 }
 
-.nav{
+header{
+  background-color: #008571;
   position: sticky;
   top:0;
+  margin-top: -15px;
 }
 
 nav ul{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   list-style-type: none;
-  padding-left: 80px;
+  /* padding-left: 80px; */
 }
 
 nav li{
   display: inline;
   padding-right: 100px;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 nav a{
@@ -142,8 +151,12 @@ a:focus{
 
 
 /* a:active{
-  border:  2px solid white;
+  border:  2px solid white
 } */
+header{
+  grid-column: 1 / -1;
+
+}
 footer{
   background-color: #008571;
   color: white;
@@ -157,7 +170,7 @@ footer{
 
 .container{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
   grid-row-gap: 15px;
   width: 100vw;
@@ -265,15 +278,15 @@ footer{
   margin-right: 30px;
 }
 
-#ddd_title{
+/* #ddd_title{
   padding-right: 120px;
-}
-#decoded_title{
+} */
+/* #decoded_title{
   padding-right: 120px;
 }
 #redgate_title{
   padding-right: 120px;
-}
+} */
 
 .project_description{
   text-align: center;
@@ -284,7 +297,7 @@ footer{
   text-align: center;
   color: #008571;
   text-decoration: none;
-  padding-left: 190px;
+  padding-left: 85px;
   font-family: "Raleway";
   font-size: 16px;
 
@@ -326,8 +339,8 @@ iframe{
 .laptop{
   grid-column: 1/-1;
   padding-top: 50px;
-  padding-left: -150px;
-  padding-right: 150px;
+  /* padding-left: -150px;
+  padding-right: 150px; */
   margin: 0 auto;
 }
 
@@ -422,6 +435,11 @@ input[type=submit]:hover {
   transform: rotateY(180deg);
 }
 
+.flip-card:focus .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -458,7 +476,7 @@ input[type=submit]:hover {
   }
 
   .container{
-    display:grid;
+    /* display:grid; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto auto auto auto;
     /* grid-row-gap: 15px;
@@ -484,6 +502,11 @@ input[type=submit]:hover {
     padding-left: 30px;
     padding-right: 30px;
 
+  }
+  nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
 
@@ -513,6 +536,12 @@ input[type=submit]:hover {
     /* grid-row-gap: 15px;
     width: 100vw; */
 
+  }
+
+  nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   .case_study{
