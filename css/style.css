@@ -24,6 +24,10 @@ h1{
   text-align: left;
 }
 
+.current{
+  text-decoration: underline;
+}
+
 
 #name{
   font-family: "Raleway";
@@ -296,7 +300,7 @@ footer{
 .project_link{
   text-align: center;
   color: #008571;
-  text-decoration: none;
+  text-decoration: underline;
   padding-left: 85px;
   font-family: "Raleway";
   font-size: 16px;
